@@ -8,6 +8,8 @@ setup({
     fontSize: {
       '11': '11px',
       '13': '13px',
+      '17': '17px',
+      '19': '19px',
       '15': '15px',
       '23': '23px',
     },
@@ -31,7 +33,7 @@ setup({
     },
     outline: {
       'light-gray': ['1px solid #EBEDEF'],
-      'none': ['0px'],
+      'none': ['0px !important'],
     },
     borderRadius: {
       'none': '100px',

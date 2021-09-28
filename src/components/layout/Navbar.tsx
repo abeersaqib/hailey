@@ -19,25 +19,25 @@ function Navbar() {
     <div class={`p-2`}>
       <NavLink
         class={tw`dark:text-snow-white text-secondary font-medium text-13 mt-1 p-2 hover:text-primary
-        focus:text-primary focus:bg-light-gray focus:outline-none focus:rounded-lg`}
-        activeClass={tw`text-primary bg-white`}
+        focus:text-primary focus:bg-light-gray focus:outline-none focus:rounded-lg mr-2`}
+        activeClass={tw`text-primary`}
         href="/instances"
         end
       >Deployments
       </NavLink>
       <NavLink
         class={tw`dark:text-snow-white text-secondary font-medium text-13 mt-1 p-2 hover:text-primary
-        focus:text-primary focus:bg-light-gray focus:outline-none focus:rounded-lg`}
-        activeClass={tw`text-primary bg-white`}
-        href="/instances"
+        focus:text-primary focus:bg-light-gray focus:outline-none focus:rounded-lg mr-2`}
+        activeClass={tw`text-primary`}
+        href="/version"
         end
       >Help
       </NavLink>    
       <NavLink
         class={tw`dark:text-snow-white text-secondary font-medium text-13 mt-1 p-2 hover:text-primary
         focus:text-primary focus:bg-light-gray focus:outline-none focus:rounded-lg`}
-        activeClass={tw`text-primary bg-white`}
-        href="/instances"
+        activeClass={tw`text-primary`}
+        href="/cloud-platform"
         end
       >VV
       </NavLink>

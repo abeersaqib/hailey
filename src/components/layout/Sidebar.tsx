@@ -22,11 +22,7 @@ function Sidebar() {
         {/* Main nav */}
         <nav class={tw`text-inactive flex flex-col p-2`}>
           <NavItem href="/" title="" icon={<DashboardIcon/>} />
-          <NavItem
-            href="/analytics"
-            title=""
-            icon={<AnalyticsIcon />}
-          />
+          <NavItem href="/analytics" title="" icon={<AnalyticsIcon />} />
           {/* <NavItem href="/products" title="Products" icon={<DashboardIcon />} /> */}
           <NavItem href="/code" title="" icon={<CodeIcon />} />
           {/* <NavItem href="/customers" title="Customers" icon={<UserIcon />} /> */}

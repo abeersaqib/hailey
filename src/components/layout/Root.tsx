@@ -9,6 +9,8 @@ import DashboardPage from '../../pages/DashboardPage'
 import InstancesPage from '../../pages/InstancesPage'
 import NotFoundPage from '../../pages/NotFoundPage'
 import CodePage from '../../pages/CodePage'
+import CloudPlatformPage from '../../pages/CloudPlatformPage'
+import VersionPage from '../../pages/VersionPage'
 import ProductsPage from '../../pages/ProductsPage'
 import Sidebar from './Sidebar'
 import Navbar from './Navbar'
@@ -49,7 +51,7 @@ function Root() {
       <MatchRoute path="code">
       <Topbar/>
       </MatchRoute>
-      
+
     </Switch>
 
     {/* <Topbar/> */}
@@ -60,7 +62,7 @@ function Root() {
 
       {/* <Sidebar /> */}
 
-      <Switch>
+    <Switch>
       <MatchRoute end>
       <Sidebar />
       </MatchRoute>
@@ -91,6 +93,14 @@ function Root() {
 
           <MatchRoute path="code">
             <CodePage />
+          </MatchRoute>
+
+          <MatchRoute path="version">
+            <VersionPage/>
+          </MatchRoute>
+
+          <MatchRoute path="cloud-platform">
+            <CloudPlatformPage/>
           </MatchRoute>
 
         </Switch>

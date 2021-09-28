@@ -48,6 +48,10 @@ function Instances() {
 
   const [getActiveTab, setActiveTab] = createSignal('all')
 
+  // const props = {
+  //   variant: 'primary',
+  // }
+
   return (
     <div className={tw`pt-12 px-32 dark:bg-dark h-screen`}>
 
@@ -55,9 +59,12 @@ function Instances() {
       <div class={tw`flex justify-between mb-4`}>
         <p class={tw`text-primary text-23 font-semibold dark:text-sidebar-gray`}>Instances</p>
         {/* <button class={tw`px-4 py-2 rounded-lg bg-blue font-medium text-white text-base focus:outline-none`}>Create</button> */}
-        <Button variant="primary">Create</Button>
+        <Button 
+        class={tw`outline-none`}
+        variant="primary" 
+        >Create</Button>
       </div>
-      <Tabs activeKey={getActiveTab()} onChange={setActiveTab}>
+      <Tabs activeKey={getActiveTab()} onChange={setActiveTab} class={tw`first:border-b-1 border-blue`}>
         <TabPane key="all" tab="Active">
           
           <div class={tw`mt-8 flex grid grid-cols-2 gap-4`}>
