@@ -123,7 +123,7 @@ function CodePage() {
 
   return (
     
-    <div id="container" className={tw`h-screen`} style="height: calc(100vh - 95px)">
+    <div id="container" className={tw`h-[calc(100vh-89px)]`}>
       <style>
         {`
         .ui-layout-resizer {

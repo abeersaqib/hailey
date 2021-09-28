@@ -33,7 +33,7 @@ function Root() {
   `}
     </style>
 
-    <div className={tw`w-screen`}>
+    <div className={tw`w-screen dark:bg-dark`}>
 
     <Navbar/>
     

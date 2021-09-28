@@ -12,7 +12,7 @@ import NavItem from './NavItem'
 
 function Sidebar() {
   return (
-    <section class={tw`bg-nav flex flex-col bg-sidebar-gray`} style="height: calc(100vh - 95px)">
+    <section class={tw`bg-nav flex flex-col bg-sidebar-gray h-[calc(100vh-89px)]`}>
       <div class={tw`flex-1 overflow-y-auto`}>
         {/* Logo */}
         {/* <div class={tw`px-5 py-4`}>

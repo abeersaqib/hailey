@@ -38,7 +38,7 @@ function MonacoEditor() {
     })
     
   return (
-    <div id="monaco" style="height: 100%" class={`w-full`}></div>
+    <div id="monaco" class={`w-full h-full`}></div>
   )
 }
 
