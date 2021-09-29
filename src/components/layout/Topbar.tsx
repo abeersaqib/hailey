@@ -4,9 +4,9 @@ import ExawaveIcon from '../icons/ExawaveIcon'
 import RunIcon from '../../components/icons/RunIcon'
 import SettingsIcon from '../../components/icons/SettingsIcon'
 import { Avatar, Heading, TabPane, Tabs } from '@launch/solid'
-
 import { NavLink } from '@rturnq/solid-router'
-
+import { Switch } from 'solid-js'
+import { MatchRoute } from '@rturnq/solid-router'
 
 function Topbar() {
   return (
@@ -44,37 +44,6 @@ function Topbar() {
         <span class="dot mr-3"></span>Mynewcluster
       </button>
 
-      <div class={tw`float-right flex py-2 pr-6`}>
-      <div class="avatars">
-        <span class="avatar">
-              <img src="https://www.fillmurray.com/50/50" width="50" height="50"/>
-          </span>
-        <span class="avatar">
-              <img src="https://www.fillmurray.com/100/100" width="50" height="50"/>
-          </span>
-        <span class="avatar">
-              <img src="https://www.fillmurray.com/200/200" width="50" height="50"/>
-          </span>
-        <span class="avatar">
-              <img src="https://www.fillmurray.com/150/150" width="50" height="50"/>
-          </span>
-        <span class="avatar">
-              <img src="https://www.fillmurray.com/50/50" width="50" height="50"/>
-          </span>
-      </div>
-      <div class={tw`inline-flex mb-2`}>
-      <button class={tw`flex dark:text-snow-white ml-2 text-secondary rounded-lg border dark:border-snow-white border-light-gray font-medium text-13 py-1 mt-1 px-3
-        hover:text-primary focus:text-primary focus:bg-light-gray focus:outline-none focus:rounded-lg
-        `}><span class={`mr-2 mt-1`}><RunIcon/></span>
-        Run</button>
-        <button 
-        class={tw`dark:text-snow-white ml-2 text-secondary rounded-lg border dark:border-snow-white border-light-gray font-medium text-13 py-1 mt-1 px-3
-        hover:text-primary focus:text-primary focus:bg-light-gray focus:outline-none focus:rounded-lg`}>
-          <span><SettingsIcon/></span>
-        </button>
-      </div>
-
-      </div>
     </div>
     </>
   )

@@ -15,6 +15,7 @@ import ProductsPage from '../../pages/ProductsPage'
 import Sidebar from './Sidebar'
 import Navbar from './Navbar'
 import Topbar from './Topbar'
+import CodeTopbar from './CodeTopbar'
 import { Button, Heading, TabPane, Tabs, Text } from '@launch/solid'
 import DashboardIcon from '../icons/DashboardIcon'
 import { NavLink } from '@rturnq/solid-router'
@@ -49,7 +50,7 @@ function Root() {
       </MatchRoute>
 
       <MatchRoute path="code">
-      <Topbar/>
+      <CodeTopbar/>
       </MatchRoute>
 
     </Switch>
