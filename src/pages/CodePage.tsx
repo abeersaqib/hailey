@@ -7,6 +7,7 @@ import $ from "jquery";
 import "jqueryui";
 import "jquery.ui.layout";
 import { TabPane, Tabs } from '@launch/solid'
+import DownloadIcon from '../components/icons/DownloadIcon';
 
 function CodePage() {
 
@@ -220,9 +221,21 @@ function CodePage() {
       
       <div class={tw`ui-layout-south`}>
 
-        {/* <Tabs activeKey={getActiveTab()} onChange={setActiveTab}>
+        <div>
+
+        <Tabs activeKey={getActiveTab()} onChange={setActiveTab}>
           <TabPane key="all" tab="Results">
-            <div class={`p-3 flex justify-end border-b-1 border-t-1 border-light-gray`}>
+            <div class={tw`border-t-1 border-light-gray`}>
+              <div class={tw`flex float-right py-1`}>
+              <p class={tw`text-secondary font-medium text-13 py-1 px-3`}>2,056 rows in 0.56s</p>
+              <button class={tw`flex text-secondary rounded-lg border border-light-gray font-medium text-13 py-1 px-3
+            hover:text-primary focus:text-primary focus:bg-light-gray focus:outline-none focus:rounded-lg
+            `}><span class={tw`mr-2 pt-1`}><DownloadIcon/></span>CSV
+            </button>
+              </div>
+
+            </div>
+            {/* <div class={`p-3 flex justify-end border-b-1 border-t-1 border-light-gray`}>
             <p class={tw`ml-2 text-secondary font-medium text-sm py-1 px-3`}>2,056 rows in 0.56s</p>
             <button class={tw`flex text-secondary rounded-lg border border-light-gray font-medium text-xs py-1 px-3
             hover:text-primary focus:text-primary focus:bg-light-gray focus:outline-none focus:rounded-lg
@@ -236,13 +249,15 @@ function CodePage() {
               columns={state.tableFields}
               data={state.tableData}
             ></SolidUI.Table>
-            </div>
+            </div> */}
             </TabPane>
           <TabPane key="drafts" tab="Visualize">
             <div class={tw`pt-4`}>
             </div>
           </TabPane>
-        </Tabs> */}
+        </Tabs>
+
+        </div>
 
       </div>
 

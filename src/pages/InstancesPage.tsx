@@ -66,9 +66,12 @@ function Instances() {
         >Create</Button>
       </div>
       <Tabs activeKey={getActiveTab()} onChange={setActiveTab} class={tw`first:border-b-1 border-blue`}>
+      {/* <div class={`p-3 flex justify-end border-b-1 border-t-1 border-light-gray`}>
+
+            </div> */}
         <TabPane key="all" tab="Active">
           
-          <div class={tw`mt-8 flex grid grid-cols-2 gap-4`}>
+          <div class={tw`pt-8 flex grid grid-cols-2 gap-4 border-b-1 border-t-1 border-light-gray`}>
             <div class={tw`dark:bg-gray px-6 pt-2 shadow-card rounded-lg border border-light-gray dark:border-snow-white`}>
 
               <div class={tw`flex justify-between border-b-1 border-light-gray dark:border-snow-white`}>
@@ -175,7 +178,7 @@ function Instances() {
 
         </TabPane>
         <TabPane key="drafts" tab="Inactive">
-          <div class={tw`pt-4`}>
+          <div class={tw`pt-8 border-t-1 border-light-gray`}>
           </div>
         </TabPane>
       </Tabs>
