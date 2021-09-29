@@ -4,6 +4,7 @@ import { children, createEffect, createSignal, onMount, Show } from 'solid-js'
 import ClockIcon from '../components/icons/ClockIcon'
 import FlagIcon from '../components/icons/FlagIcon'
 import LineChart2D from '../components/charts/LineChart2D.js'
+import SettingsIcon from '../components/icons/SettingsIcon'
 
 function Instances() {
 
@@ -75,15 +76,15 @@ function Instances() {
                   <span class="dot mr-3"></span>Mynewcluster
                   <span class={tw`ml-3 text-green bg-light-green dark:bg-gray dark:border dark:border-green rounded-lg font-semibold text-11 py-1 px-3`}>FREE</span>
                 </p>
-                <div class={tw`py-2`}>
+                <div class={tw`flex py-2`}>
                   <button class={tw`dark:text-snow-white text-secondary rounded-lg border dark:border-snow-white border-light-gray font-medium text-13 py-1 px-3
                   hover:text-primary focus:text-primary focus:bg-light-gray focus:outline-none focus:rounded-lg
                   `}>
                   Connect</button>
                   <button class={tw`dark:text-snow-white ml-2 text-secondary rounded-lg border dark:border-snow-white border-light-gray font-medium text-13 py-1 px-3
-                  hover:text-primary focus:text-primary focus:bg-light-gray focus:outline-none focus:rounded-lg
-                  `}>
-                  ...</button>
+                    hover:text-primary focus:text-primary focus:bg-light-gray focus:outline-none focus:rounded-lg
+                    `}><span><SettingsIcon/></span>
+                    </button>
                 </div>
               </div>
 
@@ -126,15 +127,15 @@ function Instances() {
                   <span class="dot mr-3"></span>Mynewcluster
                   <span class={tw`ml-3 text-green bg-light-green dark:bg-gray dark:border dark:border-green rounded-lg font-semibold text-11 py-1 px-3`}>FREE</span>
                 </p>
-                <div class={tw`py-2`}>
+                <div class={tw`flex py-2`}>
                   <button class={tw`dark:text-snow-white text-secondary rounded-lg border dark:border-snow-white border-light-gray font-medium text-13 py-1 px-3
                   hover:text-primary focus:text-primary focus:bg-light-gray focus:outline-none focus:rounded-lg
                   `}>
                   Connect</button>
                   <button class={tw`dark:text-snow-white ml-2 text-secondary rounded-lg border dark:border-snow-white border-light-gray font-medium text-13 py-1 px-3
-                  hover:text-primary focus:text-primary focus:bg-light-gray focus:outline-none focus:rounded-lg
-                  `}>
-                  ...</button>
+                    hover:text-primary focus:text-primary focus:bg-light-gray focus:outline-none focus:rounded-lg
+                    `}><span><SettingsIcon/></span>
+                    </button>
                 </div>
               </div>
 

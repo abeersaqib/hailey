@@ -1,7 +1,5 @@
-import type { JSX } from 'solid-js'
 import { tw } from 'twind'
 import ExawaveIcon from '../icons/ExawaveIcon'
-
 import { NavLink } from '@rturnq/solid-router'
 
 
@@ -42,7 +40,6 @@ function Navbar() {
       >VV
       </NavLink>
 
-    {/* <button class={tw`dark:text-snow-white text-secondary font-medium text-sm mt-1 p-2 hover:text-primary focus:text-primary focus:bg-light-gray focus:outline-none focus:rounded-lg`}>VV</button> */}
     </div>
 
   </div>

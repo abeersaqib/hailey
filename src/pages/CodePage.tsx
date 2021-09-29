@@ -7,7 +7,6 @@ import $ from "jquery";
 import "jqueryui";
 import "jquery.ui.layout";
 import { TabPane, Tabs } from '@launch/solid'
-import DownloadIcon from '../components/icons/DownloadIcon'
 
 function CodePage() {
 
