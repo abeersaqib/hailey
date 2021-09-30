@@ -11,42 +11,49 @@ function Instances() {
 
   onMount(() => { 
 
-    var chartVals: any;
+    let chart = new LineChart2D("canvas", 1,["#00F"]);
+    let chart2 = new LineChart2D("canvas2", 3, ["#00F", "#F00", "#0F0"]);
+    let chart3 = new LineChart2D("canvas3", 1,["#00F"]);
+    let chart4 = new LineChart2D("canvas4", 3, ["#00F", "#F00", "#0F0"]);
 
     const socket = io("http://52.33.89.229:3001");
+
     socket.on('redpanda', (data) => {
-      chartVals = data;
+      chart.addData(data.chart);
+      chart2.addData(data.chart2[0], data.chart2[1], data.chart2[2]);
+      chart3.addData(data.chart3);
+      chart4.addData(data.chart4[0], data.chart4[1], data.chart4[2]);
     })
 
     // // Pass CanvasID, Number of Lines (max 3), array of colors (for each line), max number of intervals (optional)
-    let chart = new LineChart2D("canvas", 1,["#00F"]);
-    setInterval(
-      function(){
+    // let chart = new LineChart2D("canvas", 1,["#00F"]);
+    // setInterval(
+    //   function(){
         // Add data point on Y axis
-        chart.addData(chartVals.chart);
-      }, 30);
+        // chart.addData(chartVals.chart);
+      // }, 30);
 
     // Pass CanvasID, Number of Lines (max 3), array of colors (for each line), max number of intervals (optional)
-    let chart2 = new LineChart2D("canvas2", 3, ["#00F", "#F00", "#0F0"]);
-    setInterval(
-      function(){
+    // let chart2 = new LineChart2D("canvas2", 3, ["#00F", "#F00", "#0F0"]);
+    // setInterval(
+    //   function(){
         // Add data point on Y axis
-        chart2.addData(chartVals.chart2[0], chartVals.chart2[1], chartVals.chart2[2]);
-      }, 50);
+        // chart2.addData(chartVals.chart2[0], chartVals.chart2[1], chartVals.chart2[2]);
+      // }, 50);
 
-      let chart3 = new LineChart2D("canvas3", 1,["#00F"]);
-      setInterval(
-        function(){
+      // let chart3 = new LineChart2D("canvas3", 1,["#00F"]);
+      // setInterval(
+      //   function(){
           // Add data point on Y axis
-          chart3.addData(chartVals.chart3);
-        }, 30);
+          // chart3.addData(chartVals.chart3);
+        // }, 30);
 
-      let chart4 = new LineChart2D("canvas4", 3, ["#00F", "#F00", "#0F0"]);
-      setInterval(
-        function(){
+      // let chart4 = new LineChart2D("canvas4", 3, ["#00F", "#F00", "#0F0"]);
+      // setInterval(
+      //   function(){
           // Add data point on Y axis
-          chart4.addData(chartVals.chart4[0], chartVals.chart4[1], chartVals.chart4[2]);
-        }, 50);
+          // chart4.addData(chartVals.chart4[0], chartVals.chart4[1], chartVals.chart4[2]);
+        // }, 50);
   
     })
 
