@@ -5,22 +5,25 @@ import ClockIcon from '../components/icons/ClockIcon'
 import FlagIcon from '../components/icons/FlagIcon'
 import LineChart2D from '../components/charts/LineChart2D.js'
 import SettingsIcon from '../components/icons/SettingsIcon'
+import { io } from 'socket.io-client'
 
 function Instances() {
 
   onMount(() => { 
-    const getRandomInt = (min, max) => {
-      min = Math.ceil(min);
-      max = Math.floor(max);
-      return Math.floor(Math.random() * (max - min) + min);
-    } 
+
+    var chartVals: any;
+
+    const socket = io("http://52.33.89.229:3001");
+    socket.on('redpanda', (data) => {
+      chartVals = data;
+    })
 
     // // Pass CanvasID, Number of Lines (max 3), array of colors (for each line), max number of intervals (optional)
     let chart = new LineChart2D("canvas", 1,["#00F"]);
     setInterval(
       function(){
         // Add data point on Y axis
-        chart.addData(getRandomInt(0,100));
+        chart.addData(chartVals.chart);
       }, 30);
 
     // Pass CanvasID, Number of Lines (max 3), array of colors (for each line), max number of intervals (optional)
@@ -28,21 +31,21 @@ function Instances() {
     setInterval(
       function(){
         // Add data point on Y axis
-        chart2.addData(getRandomInt(0,30), getRandomInt(20,40), getRandomInt(40,60));
+        chart2.addData(chartVals.chart2[0], chartVals.chart2[1], chartVals.chart2[2]);
       }, 50);
 
       let chart3 = new LineChart2D("canvas3", 1,["#00F"]);
       setInterval(
         function(){
           // Add data point on Y axis
-          chart3.addData(getRandomInt(0,100));
+          chart3.addData(chartVals.chart3);
         }, 30);
 
       let chart4 = new LineChart2D("canvas4", 3, ["#00F", "#F00", "#0F0"]);
       setInterval(
         function(){
           // Add data point on Y axis
-          chart4.addData(getRandomInt(0,30), getRandomInt(20,40), getRandomInt(40,60));
+          chart4.addData(chartVals.chart4[0], chartVals.chart4[1], chartVals.chart4[2]);
         }, 50);
   
     })

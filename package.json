@@ -3,12 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "prepare": "husky install",
     "start": "solid-scripts start",
     "build": "solid-scripts build",
     "test": "solid-scripts test",
-    "format": "yarn prettier --write .",
-    "gqlgen": "graphql-codegen --config codegen.yml"
+    "format": "yarn prettier --write ."
   },
   "devDependencies": {
     "@commitlint/cli": "^12.1.4",
@@ -50,6 +48,7 @@
     "monaco-editor": "^0.28.1",
     "npm": "^7.24.1",
     "socket.io": "^4.2.0",
+    "socket.io-client": "^4.2.0",
     "solid-urql": "^0.1.0",
     "twind": "^0.16.16",
     "wonka": "^4.0.15"
