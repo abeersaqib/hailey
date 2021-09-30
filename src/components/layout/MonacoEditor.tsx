@@ -1,7 +1,4 @@
-import { JSX, onMount } from 'solid-js'
-import { tw } from 'twind'
-import ExawaveIcon from '../icons/ExawaveIcon'
-import { NavLink } from '@rturnq/solid-router'
+import { onMount } from 'solid-js'
 import * as monaco from 'monaco-editor/esm/vs/editor/editor.main.js';
 
 function MonacoEditor() {

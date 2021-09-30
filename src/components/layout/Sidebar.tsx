@@ -3,11 +3,6 @@ import { tw } from 'twind'
 import AnalyticsIcon from '../icons/AnalyticsIcon'
 import DashboardIcon from '../icons/DashboardIcon'
 import CodeIcon from '../icons/CodeIcon'
-import Logo from '../icons/Logo'
-import PlusIcon from '../icons/PlusIcon'
-import SettingsIcon from '../icons/SettingsIcon'
-import UserIcon from '../icons/UserIcon'
-import AppMenuItem from './AppMenuItem'
 import NavItem from './NavItem'
 
 function Sidebar() {

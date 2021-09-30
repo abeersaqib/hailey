@@ -1,7 +1,5 @@
 import { tw } from 'twind'
 import { Button, Heading, TabPane, Tabs } from '@launch/solid'
-import StarterIcon from '../components/icons/StarterIcon'
-import CheckIcon from '../components/icons/CheckIcon'
 import FlagIcon from '../components/icons/FlagIcon'
 
 function CloudPlatformPage() {

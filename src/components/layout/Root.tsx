@@ -1,25 +1,19 @@
 import { Switch } from 'solid-js'
 import { tw } from 'twind'
-
 import { MatchRoute } from '@rturnq/solid-router'
 
 import AnalyticsPage from '../../pages/AnalyticsPage'
-import CustomersPage from '../../pages/CustomersPage'
 import DashboardPage from '../../pages/DashboardPage'
 import InstancesPage from '../../pages/InstancesPage'
 import NotFoundPage from '../../pages/NotFoundPage'
 import CodePage from '../../pages/CodePage'
 import CloudPlatformPage from '../../pages/CloudPlatformPage'
 import VersionPage from '../../pages/VersionPage'
-import ProductsPage from '../../pages/ProductsPage'
 import Sidebar from './Sidebar'
 import Navbar from './Navbar'
 import Topbar from './Topbar'
 import CodeTopbar from './CodeTopbar'
-import { Button, Heading, TabPane, Tabs, Text } from '@launch/solid'
-import DashboardIcon from '../icons/DashboardIcon'
-import { NavLink } from '@rturnq/solid-router'
-import MonacoEditor from '../../components/layout/MonacoEditor'
+
 
 function Root() {
   return (
@@ -55,13 +49,9 @@ function Root() {
 
     </Switch>
 
-    {/* <Topbar/> */}
     </div>
 
     <div className={tw`flex w-screen`}>
-      {/* <NavItem title="hi" href="" icon=""/> */}
-
-      {/* <Sidebar /> */}
 
     <Switch>
       <MatchRoute end>

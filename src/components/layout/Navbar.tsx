@@ -2,7 +2,6 @@ import { tw } from 'twind'
 import ExawaveIcon from '../icons/ExawaveIcon'
 import { NavLink } from '@rturnq/solid-router'
 
-
 function Navbar() {
   return (
     <div class={tw`border-b-1 dark:border-snow-white border-light-gray flex justify-between pr-5`}>

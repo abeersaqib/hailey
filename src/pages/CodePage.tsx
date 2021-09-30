@@ -129,6 +129,9 @@ function CodePage() {
         .ui-layout-resizer {
           background: #EBEBEB !important;
         }
+        // .ui-layout-resizer::before {
+        //   content: "\f015";
+        // }
         .ui-layout-resizer-south {
           height: 10px !important;
         }
@@ -138,9 +141,11 @@ function CodePage() {
         .ui-layout-west {
           border: 1px solid #EBEDEF !important;
           padding: 0 !important;
+          border-top: 0px solid #EBEDEF !important;
         }
         .ui-layout-center {
           border: 1px solid #EBEDEF !important;
+          border-top: 0px solid #EBEDEF !important;
         }
         .ui-layout-south {
           border: 1px solid #EBEDEF !important;
@@ -171,11 +176,11 @@ function CodePage() {
       <div class={tw`ui-layout-west flex flex-wrap content-between`}>
 
         {/* <div class={tw`border-b-1 border-light-gray`}>
-          <p class={tw`p-2 pl-4 text-secondary`}>New Table</p>
-        </div>
+          <p class={tw`p-2 pl-4 text-secondary text-15 font-medium`}>New Table</p>
+        </div> */}
 
         <div class={`h-64 overflow-auto p-3`}>
-        <For each={state.data}>
+        {/* <For each={state.data}>
           {(entry) => {
             const { name, fields } = entry;
             return (
@@ -199,20 +204,20 @@ function CodePage() {
             </div>
             );
           }}
-        </For>
-        </div>
+        </For> */}
+        </div> 
 
-        <div class={tw`flex justify-end border-t-1 border-light-gray p-2 pr-4 pb-3 absolute w-full`} style="bottom: 0">
+        {/* <div class={tw`flex justify-end border-t-1 border-light-gray p-2 pr-4 pb-3 absolute w-full`} style="bottom: 0">
 
-          <p class={tw`text-secondary font-medium text-sm py-1 px-3
+          <p class={tw`text-secondary font-medium text-13 py-1 px-3
           `}>Cancel</p>
 
-          <button class={tw`text-secondary bg-light-gray rounded-lg border border-light-gray font-medium text-sm py-1 px-3
+          <button class={tw`text-secondary bg-light-gray rounded-lg border border-light-gray font-medium text-13 py-1 px-3
           hover:text-primary focus:text-primary focus:bg-light-gray focus:outline-none focus:rounded-lg
           `}>
           Create</button>
-
         </div> */}
+
       </div>
       
       <div class={tw`ui-layout-center h-full`}>
@@ -222,17 +227,24 @@ function CodePage() {
       <div class={tw`ui-layout-south`}>
 
         <div>
-
+        <div class={tw`flex float-right py-1`}>
+        <p class={tw`text-secondary font-medium text-13 py-1 px-3`}>2,056 rows in 0.56s</p>
+        <button class={tw`flex text-secondary rounded-lg border border-light-gray font-medium text-13 py-1 px-3
+        hover:text-primary focus:text-primary focus:bg-light-gray focus:outline-none focus:rounded-lg
+        `}><span class={tw`mr-2 pt-1`}><DownloadIcon/></span>CSV
+        </button>
+        </div>
         <Tabs activeKey={getActiveTab()} onChange={setActiveTab}>
+          
           <TabPane key="all" tab="Results">
             <div class={tw`border-t-1 border-light-gray`}>
-              <div class={tw`flex float-right py-1`}>
+              {/* <div class={tw`flex float-right py-1`}>
               <p class={tw`text-secondary font-medium text-13 py-1 px-3`}>2,056 rows in 0.56s</p>
               <button class={tw`flex text-secondary rounded-lg border border-light-gray font-medium text-13 py-1 px-3
             hover:text-primary focus:text-primary focus:bg-light-gray focus:outline-none focus:rounded-lg
             `}><span class={tw`mr-2 pt-1`}><DownloadIcon/></span>CSV
             </button>
-              </div>
+              </div> */}
 
             </div>
             {/* <div class={`p-3 flex justify-end border-b-1 border-t-1 border-light-gray`}>
@@ -252,7 +264,7 @@ function CodePage() {
             </div> */}
             </TabPane>
           <TabPane key="drafts" tab="Visualize">
-            <div class={tw`pt-4`}>
+          <div class={tw`border-t-1 border-light-gray`}>
             </div>
           </TabPane>
         </Tabs>

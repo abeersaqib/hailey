@@ -1,5 +1,4 @@
 import { setup } from 'twind'
-const colors = require('tailwindcss/colors')
 
 setup({
   darkMode: "class",

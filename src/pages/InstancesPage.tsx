@@ -1,6 +1,6 @@
 import { tw } from 'twind'
 import { Button, Heading, TabPane, Tabs } from '@launch/solid'
-import { children, createEffect, createSignal, onMount, Show } from 'solid-js'
+import { createSignal, onMount } from 'solid-js'
 import ClockIcon from '../components/icons/ClockIcon'
 import FlagIcon from '../components/icons/FlagIcon'
 import LineChart2D from '../components/charts/LineChart2D.js'
@@ -14,7 +14,7 @@ function Instances() {
       max = Math.floor(max);
       return Math.floor(Math.random() * (max - min) + min);
     } 
-    
+
     // // Pass CanvasID, Number of Lines (max 3), array of colors (for each line), max number of intervals (optional)
     let chart = new LineChart2D("canvas", 1,["#00F"]);
     setInterval(
@@ -49,26 +49,19 @@ function Instances() {
 
   const [getActiveTab, setActiveTab] = createSignal('all')
 
-  // const props = {
-  //   variant: 'primary',
-  // }
-
   return (
     <div className={tw`pt-12 px-32 dark:bg-dark h-screen`}>
 
       <p class={tw`text-blue text-13 font-semibold mb-2`}>Instances</p>
       <div class={tw`flex justify-between mb-4`}>
         <p class={tw`text-primary text-23 font-semibold dark:text-sidebar-gray`}>Instances</p>
-        {/* <button class={tw`px-4 py-2 rounded-lg bg-blue font-medium text-white text-base focus:outline-none`}>Create</button> */}
         <Button 
         class={tw`outline-none`}
         variant="primary" 
         >Create</Button>
       </div>
       <Tabs activeKey={getActiveTab()} onChange={setActiveTab} class={tw`first:border-b-1 border-blue`}>
-      {/* <div class={`p-3 flex justify-end border-b-1 border-t-1 border-light-gray`}>
 
-            </div> */}
         <TabPane key="all" tab="Active">
           
           <div class={tw`pt-8 flex grid grid-cols-2 gap-4 border-b-1 border-t-1 border-light-gray`}>
@@ -187,5 +180,3 @@ function Instances() {
 }
 
 export default Instances
-
-

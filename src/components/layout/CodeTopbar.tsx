@@ -1,12 +1,6 @@
-import type { JSX } from 'solid-js'
 import { tw } from 'twind'
-import ExawaveIcon from '../icons/ExawaveIcon'
 import RunIcon from '../icons/RunIcon'
 import SettingsIcon from '../icons/SettingsIcon'
-import { Avatar, Heading, TabPane, Tabs } from '@launch/solid'
-import { NavLink } from '@rturnq/solid-router'
-import { Switch } from 'solid-js'
-import { MatchRoute } from '@rturnq/solid-router'
 
 function CodeTopbar() {
   return (
@@ -45,7 +39,7 @@ function CodeTopbar() {
       </button>
 
 
-          <div class={tw`float-right flex py-2 pr-6`}>
+          <div class={tw`float-right flex pt-2 pr-6`}>
             <div class="avatars">
               <span class="avatar">
                     <img src="https://www.fillmurray.com/50/50" width="50" height="50"/>
