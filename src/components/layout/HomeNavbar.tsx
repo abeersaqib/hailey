@@ -16,21 +16,21 @@ function Navbar() {
     </NavLink>
     <div class={tw`mt-4`}>
       <NavLink
-        class={tw`text-white font-medium text-15 mx-4`}
+        class={tw`text-light-white font-medium text-15 mx-4`}
         activeClass={tw`text-white`}
         href="/home"
         end
       >Docs
       </NavLink>
       <NavLink
-        class={tw`text-white font-medium text-15 mx-4`}
+        class={tw`text-light-white font-medium text-15 mx-4`}
         activeClass={tw`text-white`}
         href="/home"
         end
       >Blog
       </NavLink>    
       <NavLink
-        class={tw`text-white font-medium text-15 mx-4`}
+        class={tw`text-light-white font-medium text-15 mx-4`}
         activeClass={tw`text-white`}
         href="/home"
         end

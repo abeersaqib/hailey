@@ -1,9 +1,16 @@
 import { setup } from 'twind'
 
 setup({
+  preflight: {
+    '@import': `url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap')`,
+  },
   darkMode: "class",
   // darkMode: "media",
   theme: {
+    fontFamily: {
+      sans: 'Manrope, sans-serif',
+    },
+
     fontSize: {
       '11': '11px',
       '13': '13px',
@@ -12,6 +19,7 @@ setup({
       '21': '21px',
       '15': '15px',
       '23': '23px',
+      '33': '33px',
       '47': '47px',
       '53': '53px',
     },
@@ -45,6 +53,7 @@ setup({
       'lg': '12px',
       'xl': '20px',
       'xxl': '30px',
+      '46': '46px',
     },
     borderColor: {
       'snow-white': '#303234',
