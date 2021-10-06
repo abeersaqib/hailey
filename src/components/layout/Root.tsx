@@ -11,8 +11,10 @@ import CloudPlatformPage from '../../pages/CloudPlatformPage'
 import VersionPage from '../../pages/VersionPage'
 import Sidebar from './Sidebar'
 import Navbar from './Navbar'
+import HomeNavbar from './HomeNavbar'
 import Topbar from './Topbar'
 import CodeTopbar from './CodeTopbar'
+import HomePage from '../../pages/HomePage'
 
 
 function Root() {
@@ -32,7 +34,36 @@ function Root() {
 
     <div className={tw`w-screen dark:bg-dark`}>
 
-    <Navbar/>
+    <Switch>
+
+      <MatchRoute end>
+        <Navbar/>
+      </MatchRoute>
+
+      <MatchRoute path="instances">
+        <Navbar/>
+      </MatchRoute>
+
+      <MatchRoute path="analytics">
+        <Navbar/>
+      </MatchRoute>
+
+      <MatchRoute path="code">
+        <Navbar/>
+      </MatchRoute>
+
+      <MatchRoute path="version">
+        <Navbar/>
+      </MatchRoute>
+
+      <MatchRoute path="cloud-platform">
+        <Navbar/>
+      </MatchRoute>
+
+      <MatchRoute path="home">
+        <HomeNavbar/>
+      </MatchRoute>
+    </Switch>
     
     <Switch>
       <MatchRoute end>
@@ -92,6 +123,10 @@ function Root() {
 
           <MatchRoute path="cloud-platform">
             <CloudPlatformPage/>
+          </MatchRoute>
+
+          <MatchRoute path="home">
+            <HomePage/>
           </MatchRoute>
 
         </Switch>
