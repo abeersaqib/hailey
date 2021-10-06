@@ -10,7 +10,15 @@ setup({
     fontFamily: {
       sans: 'Manrope, sans-serif',
     },
-
+    animation: {
+      'ver-scroll': 'marqueeTop 25s linear infinite',
+    },
+    keyframes: {
+      marqueeTop: {
+        '0%': { top: '0' },
+        '100%': { top: '-100%' },
+      }
+    },
     fontSize: {
       '11': '11px',
       '13': '13px',
@@ -58,6 +66,7 @@ setup({
     borderColor: {
       'snow-white': '#303234',
       'light-gray': '#EBEDEF',
+      'blue-gray': '#122B48',
       'light-blue': '#01C4F0',
       'blue': '#0E87D7',
       'green': '#44BA76',
