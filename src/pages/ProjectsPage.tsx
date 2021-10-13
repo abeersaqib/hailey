@@ -74,12 +74,12 @@ function ProjectsPage() {
 
   return (
 	  <>
-	  <style>{`
-	  	.pink-tabs > div > button {
+	  {/* <style>{`
+	  	.pink-tabs > div > button:active {
 			color: #D15390 !important;
 		  }
 	  `}
-	  </style>
+	  </style> */}
     <div className={tw`pt-12 px-32 dark:bg-dark h-screen`}>
 
       <p class={tw`text-pink text-13 font-semibold mb-2`}>Projects</p>
