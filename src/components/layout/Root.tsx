@@ -15,24 +15,25 @@ import HomeNavbar from './HomeNavbar'
 import Topbar from './Topbar'
 import CodeTopbar from './CodeTopbar'
 import HomePage from '../../pages/HomePage'
+import AboutPage from '../../pages/AboutPage'
+import BlogPage from '../../pages/BlogPage'
+import ContactPage from '../../pages/ContactPage'
+import DocsPage from '../../pages/DocsPage'
+import LoginPage from '../../pages/LoginPage'
+import MediaPage from '../../pages/MediaPage'
+import PrivacyPage from '../../pages/PrivacyPage'
+import StartPage from '../../pages/StartPage'
+import SupportPage from '../../pages/SupportPage'
+import TermsPage from '../../pages/TermsPage'
+import TutorialPage from '../../pages/TutorialPage'
+import ProjectsPage from '../../pages/ProjectsPage'
 
 
 function Root() {
   return (
     <>
-    <style>
-      {`
-    .dot {
-      height: 10px;
-      width: 10px;
-      background-color: #44BA76;
-      border-radius: 50%;
-      display: inline-block;
-    }
-  `}
-    </style>
 
-    <div className={tw`w-screen dark:bg-dark`}>
+    <div className={tw`w-screen bg-dark`}>
 
     <Switch>
 
@@ -40,32 +41,13 @@ function Root() {
         <Navbar/>
       </MatchRoute>
 
-      <MatchRoute path="instances">
-        <Navbar/>
+      <MatchRoute path="projects">
+        <Navbar />
       </MatchRoute>
-
-      <MatchRoute path="analytics">
-        <Navbar/>
-      </MatchRoute>
-
-      <MatchRoute path="code">
-        <Navbar/>
-      </MatchRoute>
-
-      <MatchRoute path="version">
-        <Navbar/>
-      </MatchRoute>
-
-      <MatchRoute path="cloud-platform">
-        <Navbar/>
-      </MatchRoute>
-
-      <MatchRoute path="home">
-        <HomeNavbar/>
-      </MatchRoute>
+        
     </Switch>
     
-    <Switch>
+    {/* <Switch>
       <MatchRoute end>
       <Topbar/>
       </MatchRoute>
@@ -78,13 +60,13 @@ function Root() {
       <CodeTopbar/>
       </MatchRoute>
 
-    </Switch>
+    </Switch> */}
 
     </div>
 
-    <div className={tw`flex w-screen`}>
+    <div className={tw`flex w-screen bg-dark`}>
 
-    <Switch>
+    {/* <Switch>
       <MatchRoute end>
       <Sidebar />
       </MatchRoute>
@@ -97,38 +79,18 @@ function Root() {
       <Sidebar />
       </MatchRoute>
       
-    </Switch>
+    </Switch> */}
 
-      <main className={tw`w-full flex-1`}>
+      <main className={tw`w-full h-screen flex-1 bg-dark`}>
         <Switch fallback={NotFoundPage}>
           <MatchRoute end>
             <DashboardPage />
           </MatchRoute>
 
-          <MatchRoute path="instances">
-            <InstancesPage />
+          <MatchRoute path="projects">
+            <ProjectsPage />
           </MatchRoute>
-
-          <MatchRoute path="analytics">
-            <AnalyticsPage />
-          </MatchRoute>
-
-          <MatchRoute path="code">
-            <CodePage />
-          </MatchRoute>
-
-          <MatchRoute path="version">
-            <VersionPage/>
-          </MatchRoute>
-
-          <MatchRoute path="cloud-platform">
-            <CloudPlatformPage/>
-          </MatchRoute>
-
-          <MatchRoute path="home">
-            <HomePage/>
-          </MatchRoute>
-
+          
         </Switch>
       </main>
     </div>

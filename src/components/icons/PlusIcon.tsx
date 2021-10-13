@@ -1,4 +1,4 @@
-import type { JSX } from 'solid-js/types'
+import type { JSX } from 'solid-js'
 
 type Props = {} & JSX.SvgSVGAttributes<SVGSVGElement>
 

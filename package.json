@@ -1,5 +1,5 @@
 {
-  "name": "exawave",
+  "name": "hailey",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -40,6 +40,7 @@
     "@urql/core": "^2.1.4",
     "classnames": "^2.3.1",
     "graphql": "^15.5.1",
+    "gsap": "^3.8.0",
     "i": "^0.3.7",
     "jquery": "^3.6.0",
     "jquery-ui": "^1.12.1",

@@ -11,7 +11,7 @@ setup({
       sans: 'Manrope, sans-serif',
     },
     animation: {
-      'ver-scroll': 'marqueeTop 25s linear infinite',
+      'ver-scroll': 'marqueeTop 5s linear infinite',
     },
     keyframes: {
       marqueeTop: {
@@ -30,6 +30,7 @@ setup({
       '33': '33px',
       '47': '47px',
       '53': '53px',
+      '93': '93px',
     },
     colors: {
       'white': '#fff',
@@ -39,6 +40,7 @@ setup({
       'secondary': '#727F8B',
       'light-gray': '#EBEDEF',
       'light-blue': '#01C4F0',
+      'medium-gray': '#F2F1F3',
       'blue': '#0E87D7',
       'sidebar-gray': '#F9FAFB',
       'green': '#146C13',
@@ -46,11 +48,14 @@ setup({
       'dark': '#121213',
       'dark-gray': '#1D2F44',
       'gray': '#1C2023',
-      'navy-blue': '#071B32'
+      'navy-blue': '#071B32',
+      'sea-green': '#19E2E2',
+      'pink': '#D15390'
     },
     boxShadow: {
       nav: '0px 4px 10px rgba(0, 0, 0, 0.05)',
-      card: '0px 4px 15px rgba(0, 0, 0, 0.07)'
+      card: '0px 4px 15px rgba(0, 0, 0, 0.07)',
+      'rec-card': '0px 5px 5px rgba(7, 27, 50, 0.1)'
     },
     outline: {
       'light-gray': ['1px solid #EBEDEF'],
